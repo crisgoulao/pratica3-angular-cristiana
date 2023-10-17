@@ -1,0 +1,11 @@
+<h2>Editar Tarefa</h2>
+
+<form [formGroup]="editForm" (ngSubmit)="saveChanges()">
+  <div class="form-group">
+    <label for="title">Título:</label>
+    <input type="text" id="title" formControlName="title" class="form-control">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Salvar</button>
+</form>
+
