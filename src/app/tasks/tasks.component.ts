@@ -35,9 +35,9 @@ export class TasksComponent implements OnInit {
     }
   }
 
-  deleteTask(taskId: number) {
-    this.taskService.deleteTask(taskId);
-    this.tasks = this.taskService.getTasks();
+  deleteTask(task: Task) {
+    this.taskToDelete = task;
+    this.displayConfirmation = true;
   }
 
   // Método para mostrar el modal de confirmación
@@ -47,14 +47,15 @@ export class TasksComponent implements OnInit {
   }
 
   // Método para confirmar la eliminación
-  confirmDelete(): void {
+  confirmDelete() {
     if (this.taskToDelete) {
       this.taskService.deleteTask(this.taskToDelete.id);
-      this.taskToDelete = null;
       this.displayConfirmation = false;
-      this.tasks = this.taskService.getTasks(); // Actualiza la lista de tareas
+      this.tasks = this.taskService.getTasks(); // Atualize a lista de tarefas
+      this.taskToDelete = null;
     }
   }
+
 
   // Método para cancelar la eliminación
   cancelDelete(): void {

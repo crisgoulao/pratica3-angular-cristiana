@@ -11,6 +11,7 @@ import { DialogModule } from 'primeng/dialog';
 import { ReactiveFormsModule } from '@angular/forms'; // Importe o ReactiveFormsModule aqui
 import { EditTaskComponent } from './edit-task/edit-task.component';
 
+
 @NgModule({
   declarations: [AppComponent, TasksComponent,EditTaskComponent],
   imports: [

@@ -23,9 +23,20 @@
         <span *ngIf="task.completed" class="task-completed">Tarefa Completa</span>
       </div>
       <div class="task-actions">
-        <button class="btn btn-danger btn-sm" (click)="showConfirmation(task)"><i class="pi pi-trash"></i> Excluir</button>
+        <button class="btn btn-danger btn-sm" (click)="deleteTask(task)"><i class="pi pi-trash"></i> Excluir</button>
         <button class="btn btn-info btn-sm" (click)="editTask(task)"><i class="pi pi-pencil"></i> Editar</button>
       </div>
     </li>
   </ul>
+
+  <!-- Modal de confirmação de exclusão -->
+  <p-dialog header="Confirmar Exclusão" [(visible)]="displayConfirmation" (onShow)="onDialogShow()" [modal]="true" [responsive]="true" [style]="{width: '300px'}">
+    <ng-template pTemplate="content">
+      <p>Tem certeza de que deseja excluir esta tarefa?</p>
+    </ng-template>
+    <ng-template pTemplate="footer">
+      <button type="button" pButton label="Sim" (click)="confirmDelete()" class="ui-button-danger"></button>
+      <button type="button" pButton label="Não" (click)="cancelDelete()" class="ui-button-secondary"></button>
+    </ng-template>
+  </p-dialog>
 </div>
