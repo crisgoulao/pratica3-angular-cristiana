@@ -29,14 +29,27 @@
     </li>
   </ul>
 
-  <!-- Modal de confirmação de exclusão -->
-  <p-dialog header="Confirmar Exclusão" [(visible)]="displayConfirmation" [modal]="true" [responsive]="true" [style]="{width: '300px'}">
-    <ng-template pTemplate="content">
+<!-- Modal de confirmação de exclusão -->
+<p-dialog [(visible)]="displayConfirmation" [modal]="true" [responsive]="true" [style]="{width: '300px'}" [styleClass]="'confirmation-dialog'">
+  <ng-template pTemplate="header">
+    <div class="confirmation-dialog-header">
+      Confirmar Exclusão
+    </div>
+  </ng-template>
+  <ng-template pTemplate="content">
+    <div class="confirmation-dialog-content">
       <p>Tem certeza de que deseja excluir esta tarefa?</p>
-    </ng-template>
-    <ng-template pTemplate="footer">
-      <button type="button" pButton label="Sim" (click)="confirmDelete()" class="ui-button-danger"></button>
-      <button type="button" pButton label="Não" (click)="cancelDelete()" class="ui-button-secondary"></button>
-    </ng-template>
-  </p-dialog>
-</div>
+    </div>
+  </ng-template>
+  <ng-template pTemplate="footer">
+    <div class="confirmation-dialog-footer">
+      <button type="button" pButton label="Sim" (click)="confirmDelete()" class="ui-button-danger confirmation-button-yes"></button>
+      <button type="button" pButton label="Não" (click)="cancelDelete()" class="ui-button-secondary confirmation-button-no"></button>
+    </div>
+  </ng-template>
+</p-dialog>
+
+
+
+
+

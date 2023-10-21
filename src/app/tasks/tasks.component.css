@@ -103,3 +103,62 @@ button.btn-info:hover {
   font-weight: bold;
   margin-left: 10px; /* Adicionada margem à esquerda para separar o texto */
 }
+
+/* Estilo para o modal de confirmação */
+.confirmation-dialog {
+  background-color: rgba(0, 0, 0, 0.6); /* Fundo semi-transparente */
+  border: 2px solid #fff; /* Adiciona uma borda branca de 2px ao redor do modal */
+}
+
+.confirmation-dialog-header {
+  background-color: #007bff; /* Fundo azul (você pode ajustar a cor conforme necessário) */
+  color: #fff; /* Cor do texto no cabeçalho */
+  padding: 8px; /* Espaçamento interno */
+  border-top-left-radius: 8px; /* Arredonda o canto superior esquerdo */
+  border-top-right-radius: 8px; /* Arredonda o canto superior direito */
+}
+
+.confirmation-dialog-content {
+  background-color: #f0f0f0; /* Fundo cinza (você pode ajustar a cor conforme necessário) */
+  padding: 16px;
+  border-bottom-left-radius: 8px; /* Arredonda o canto inferior esquerdo */
+  border-bottom-right-radius: 8px; /* Arredonda o canto inferior direito */
+}
+
+.confirmation-dialog-footer {
+  text-align: right; /* Alinha os botões à direita */
+  margin-top: 8px; /* Adiciona espaço acima dos botões */
+}
+
+/* Estilo para o botão "Sim" */
+.confirmation-button-yes {
+  background-color: #dc3545; /* Cor de fundo vermelha para "Sim" */
+  color: #fff; /* Cor do texto branco */
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  margin-right: 10px; /* Adiciona margem à direita para separar os botões */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.confirmation-button-yes:hover {
+  background-color: #c82333; /* Cor de fundo vermelha mais escura ao passar o mouse */
+}
+
+/* Estilo para o botão "Não" */
+.confirmation-button-no {
+  background-color: #007bff; /* Cor de fundo azul para "Não" */
+  color: #fff; /* Cor do texto branco */
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.confirmation-button-no:hover {
+  background-color: #0056b3; /* Cor de fundo azul mais escura ao passar o mouse */
+}
+
+
