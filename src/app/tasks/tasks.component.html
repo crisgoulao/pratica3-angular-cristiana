@@ -5,7 +5,7 @@
   <!-- Formulário para adicionar uma nova tarefa -->
   <form [formGroup]="taskForm" (ngSubmit)="addTask()" class="add-task-form">
     <div class="form-group">
-      <label for="title" class="sr-only">Tarefa</label>
+      <label for= "title" class="sr-only">Tarefa</label>
       <input type="text" id="title" class="form-control" formControlName="title" placeholder="Adicionar uma nova tarefa">
       <div *ngIf="taskForm?.get('title')?.hasError('required') && taskForm?.get('title')?.touched" class="text-danger">
         Título da tarefa é obrigatório.
@@ -30,7 +30,7 @@
   </ul>
 
   <!-- Modal de confirmação de exclusão -->
-  <p-dialog header="Confirmar Exclusão" [(visible)]="displayConfirmation" (onShow)="onDialogShow()" [modal]="true" [responsive]="true" [style]="{width: '300px'}">
+  <p-dialog header="Confirmar Exclusão" [(visible)]="displayConfirmation" [modal]="true" [responsive]="true" [style]="{width: '300px'}">
     <ng-template pTemplate="content">
       <p>Tem certeza de que deseja excluir esta tarefa?</p>
     </ng-template>
